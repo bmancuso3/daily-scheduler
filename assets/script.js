@@ -1,10 +1,9 @@
 $(document).ready(function() {
 
-// var currentTime = dayjs().hour;
 var currentTime = dayjs().format('HH');
 var dateDisplayEl = $('#currentDay');
-
 var saveBtn = $('.saveBtn')
+
 // displays the current dtg under the header
 function displayDate() {
   var todaysDate = dayjs().format('[Today is ]dddd MMMM D, YYYY [and it is currently] h:mm:ss');

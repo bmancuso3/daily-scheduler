@@ -45,14 +45,6 @@ THEN the saved events persist
 5. DayJS
 6. jQuery
 
-## Desired Format
-### Large Device
-<img src="./assets/Images/Large Device.png" alt="portfolio page example">
+## Site Preview
 
-### Medium Device
-
-<img src="./assets/Images/Medium Device.png" alt="portfolio page example">
-
-### Small Device
-
-<img src="./assets/Images/Small Device.png" alt="portfolio page example">
+<img src="./assets/Images/site-preview.png" alt="site preview">
