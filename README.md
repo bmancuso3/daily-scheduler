@@ -27,8 +27,9 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 ## References
-1. <a href="https://www.w3schools.com/howto/howto_css_cards.asp"> W3Schools - How to Create a Card</a>
-2. xyz - Bootcampspot Tutor, xyz@bootcampspot.com
+1. UTA Bootcamp curriculum, instructor examples and student solved examples
+2. Andres Miro - referenced jquery rules to assign input tasks to the associated hour-id
+3. Kaia Sheirman - Bootcampspot Tutor, kscheirman@bootcampspot.com
 
 
 

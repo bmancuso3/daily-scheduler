@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
-var currentTime = dayjs();
+// var currentTime = dayjs().hour;
+var currentTime = dayjs().format('HH');
 var dateDisplayEl = $('#currentDay');
 
 var saveBtn = $('.saveBtn')
 // displays the current dtg under the header
 function displayDate() {
-  var todaysDate = dayjs().format('[Today is ]dddd MMMM D, YYYY [and it is currently] h:mm:s');
+  var todaysDate = dayjs().format('[Today is ]dddd MMMM D, YYYY [and it is currently] h:mm:ss');
   dateDisplayEl.text(todaysDate);
 }
 
@@ -26,29 +27,21 @@ $('.time-block').each(function() {
   $(this).find('.description').val(savedTask);
 })
 
-function hourTracker() {
-    var currentHour = dayjs().hour();
-    console.log(currentHour);
+// iterates through the id of each time block and compares to the HH format of dayjs
+$('.time-block').each(function () {
+  var blockHour = $(this).attr('id');
 
-    $('.time-block').each(function () {
-      var blockHour = $(this).attr('id');
-
-      if (blockHour > currentHour) {
-        $(this).removeClass('past');
-        $(this).addClass('future');
-      } 
-        else if (blockHour === currentHour) {
-          $(this).removeClass('past');
-          $(this).addClass('present');
-        } 
-        else if (blockHour < currentHour) {
-          $(this).addClass('past');
-        }
-      });
-}
-
-hourTracker();
+  if (blockHour > currentTime) {
+    $(this).addClass('future');
+  } 
+    else if (blockHour === currentTime) {
+      $(this).addClass('present');
+    } 
+    else if (blockHour < currentTime) {
+      $(this).addClass('past');
+    }
+});
 
 displayDate();
 
-})
+});
